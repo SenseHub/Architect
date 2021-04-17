@@ -1,0 +1,500 @@
+$b_color: #000;
+$h_fontsize: 1.3rem;
+$max: 100%;
+$box-shadow: 1px 1px 15px lighten(gray,30%);
+$duration: 0.8s;
+
+@mixin h_box {
+    font-size: $h_fontsize;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    width: $max;
+}
+
+                    // ヘッダー
+
+.top-content {
+    background-image: url(img/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: $max;
+    .bg_mask {
+        display: flex;
+        justify-content: space-around;
+        width: $max;
+        height: $max;
+        padding-bottom: 30px;
+        background: rgba(255,255,255,0.5);
+    }
+}
+
+
+.menu {
+    width: $max / 5;
+    padding-top: 40px;
+    margin: 0;
+    font-weight: bold;
+    ul {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        &:hover {
+            transform: translateY(10px);
+            transition-duration: $duration;
+        }
+    }
+    a {
+        color: $b_color;
+        text-decoration: none;
+    }
+}
+
+.title {
+    width: $max / 5;
+    height: auto;
+    h1 {
+        font: italic normal 45px serif;
+        margin-top: 40px;
+        margin-bottom: 0;
+        text-shadow: 2px 2px 3px gray;
+    }
+}
+
+.info {
+    padding-top: 40px;
+    font-style: normal;
+    nav {
+        display: flex;
+        :last-of-type a {
+            &:hover {
+                background-color: darken(coral,10%);
+                color: #fff;
+                transition-duration: $duration;
+            }
+        }
+    }
+    li {
+        list-style: none;
+        margin: 0 auto 60px auto;
+        a {
+            padding: 0 8px;
+            border: 2px solid $b_color;
+            border-radius: $max / 4;
+            &:hover {
+                background-color: lighten(blue,20%);
+                color: #FFF;
+                transition-duration: $duration;
+            }
+        }
+    }
+    a {
+        display: inline-block;
+        color: $b_color;
+        font-size: 17px;
+        font-weight: bold;
+        text-decoration: none;
+        border-bottom: 2px solid $b_color;
+    }
+}
+
+                    // スライドショー
+
+.pic-list {
+    margin-top: 30px;
+    width: 70%;
+    position: relative;
+    left: 15%;
+    right: 15%;
+    z-index: -1;
+    img {
+        width: $max;
+        height: $max;
+        position: relative;
+        vertical-align: bottom;
+        opacity: 1;
+        transition: all 1.5s ease-in-out;
+    }
+    .img2 {
+        height: $max;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+    }
+}
+
+                    // 新着施工情報
+
+.new {
+    padding: 30px 0;
+    h3 {
+        margin: 0;
+        @include h_box;
+    }
+    p {
+        text-align: center;
+        line-height: 25px;
+        margin-bottom: 0;
+    }
+    hr {
+        width: $max / 2;
+    }
+}
+
+                    // 施工事例
+
+.constraction {
+    width: $max;
+    h3 {
+        @include h_box;
+    }
+    .example-box,.example-box2 {
+        display: flex;
+        justify-content: space-around;
+    }
+    .example {
+        max-width: $max / 2;
+        figure {
+            box-shadow: $box-shadow;
+            text-align: center;
+            margin-bottom: 0;
+            &:hover {
+                opacity: 0.5;
+                transition-duration: $duration;
+            }
+            span {
+                font-size: 0.9rem;
+            }
+            strong {
+                font-size: 1.2rem;
+            }
+        }
+        img {
+            max-width: $max;
+            vertical-align: bottom;
+        }
+    }
+}
+
+                    // お客様の声
+
+.client-voice {
+    padding-bottom: 20px;
+    figure {
+        margin: 0 auto;
+        display: flex;
+        box-shadow: $box-shadow;
+        max-width: $max / 1.25;
+        img {
+            width: $max / 2;
+            height: auto;
+        }
+        figcaption {
+            width: $max / 2;
+            line-height: 2rem;
+            overflow-wrap: break-word;
+            span {
+                display: block;
+                text-align: center;
+                font-weight: bold;
+            }
+        }
+    }
+    h4 {
+        @include h_box;
+        margin: 0;
+        padding: 50px 0;
+    }
+}
+
+                    // プロフィール
+
+.Profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    h4 {
+        @include h_box;
+        text-shadow: 2px 2px 3px gray;
+    }
+}
+
+.profile-box,.profile-box2 {
+    display: flex;
+    figure:first-child {
+        margin-right: 200px;
+    }
+    figcaption {
+        text-align: center;
+    }
+    img {
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+                    // グーグルマップ
+
+.Map {
+    text-align: center;
+    margin-bottom: 50px;
+    h4 {
+        @include h_box;
+    }
+    iframe {
+        vertical-align: bottom;
+        box-shadow: $box-shadow;
+        max-width: $max;
+    }
+}
+
+                    // コンタクト
+
+#Contact {
+    background-color: lighten(skyblue,22%);
+    h4 {
+        @include h_box;
+    }
+    .phone {
+        ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            li {
+                list-style: none;
+            }
+        }
+        a {
+            display: inline-block;
+            color: $b_color;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-style: normal;
+            border-bottom: 1px solid $b_color;
+            &:hover {
+                font-size: 1.4rem;
+                transition-duration: 0.5s;
+            }
+        }
+    }
+}
+
+.menuBox,.menuBox2 {
+    ul {
+        justify-content: center;
+        padding: 0;
+        display: flex;
+    }
+    li {
+        list-style: none;
+        padding: 0 15px;
+        border-right: 2px solid $b_color;
+        &:first-child {
+            border-left: 2px solid $b_color;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: $b_color;
+            font-weight: bold;
+            &:hover {
+                transform: translateY(5px);
+                transition-duration: 0.5s;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: lighten(skyblue,22%);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    p {
+        text-align: center;
+        color: lighten(gray,10%);
+    }
+}
+
+#hamberger {
+    display: none;
+}
+
+// ハンバーガーメニュー　トグル
+
+.open {
+    transform: translateY(-450px);
+    transition-duration: 1s;
+}
+
+// ハンバーガーメニュー背景
+
+.bg-color {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $b_color;
+    opacity: 0.7;
+    transition-duration: 1s;
+    z-index: 4;
+}
+
+
+                    // レスポンシブ
+
+@media (max-width: 769px) {
+    .menu,.info {
+        display: none;
+    }
+    .title {
+        width: $max;
+        text-align: center;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .pic-list {
+        img {
+            height: 70%;
+        }
+    }
+    .example-box,.example-box2 {
+        flex-direction: column;
+        .example {
+            max-width: $max;
+        }
+    }
+    .client-voice {
+        figure {
+            flex-direction: column;
+            margin-bottom: 30px;
+            img {
+                width: $max;
+            }
+            figcaption {
+                width: $max;
+            }
+        }
+        .reverse {
+            flex-direction: column-reverse;
+            figcaption {
+                width: $max;
+            }
+        }
+    }
+    .Profile {
+        flex-direction: column;
+        section {
+            width: $max;
+        }
+        .profile-box,.profile-box2 {
+            justify-content: space-around;
+            figure{
+                margin: 0;
+            }
+        }
+    }
+                    // ハンバーガーメニュー　ボタン
+    #ham-btn {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        width: 40px;
+        height: 33px;
+        background-color: #fff;
+        cursor: pointer;
+        z-index: 10;
+        span {
+            display: inline-block;
+            transition: 0.7s;
+            box-sizing: border-box;
+        }
+        span {
+            position: absolute;
+            left: 8px;
+            right: 8px;
+            height: 3px;
+            background-color: #000;
+            opacity: 0.6;
+            border-radius: 6px;
+            &:nth-of-type(1) {
+                top: 5px;
+            }
+            &:nth-of-type(2) {
+                top: 15px;
+            }
+            &:nth-of-type(3) {
+                bottom: 5px;
+            }
+        }
+    }
+                        // ハンバーガーメニュー
+    #hamberger {
+        display: block;
+        position: fixed;
+        top: 50px;
+        transition-duration: 1s;
+        width: $max;
+        z-index: 6;
+        .ham-menu {
+            li {
+                width: 80px;
+                text-align: center;
+            }
+        }
+        ul {
+            justify-content: space-around;
+            display: flex;
+            padding: 0;
+            li {
+                list-style: none;
+                a {
+                    border-bottom: 2px solid $b_color;
+                    font-weight: bold;
+                    font-style: normal;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+        .info {
+            li:last-of-type a {
+                padding: 0 9px;
+                &:hover {
+                    background-color: darken(coral,10%);
+                    transition-duration: $duration;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    body {
+        font-size: 0.9rem;
+    }
+    .profile-box,.profile-box2 {
+        text-align: center;
+        flex-direction: column;
+    }
+    .phone {
+        ul {
+            flex-direction: column;
+            text-align: center;
+        }
+        a {
+            line-height: 3rem;
+        }
+    }
+    .menuBox,.menuBox2 {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Architect</title>
+        <link rel="icon" href="img/icon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <!-- ハンバーガーメニュー -->
+        <div id="back-color"></div>
+        <div id="hamberger" class="open">
+            <nav class="ham-menu">
+                <ul>
+                    <li><a href="#Top">TOP</a></li>
+                    <li><a href="#Voice">VOICE</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#About">ABOUT</a></li>
+                    <li><a href="#Contact">CONTACT</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#Works">WORKS</a></li>
+                    <li><a href="#Company">COMPANY</a></li>
+                </ul>
+            </nav>
+            <address>
+                <nav>
+                    <ul>
+                        <li><a href="#">xxxx@xxxx.com</a></li>
+                        <li><a href="#">tel 000-0000-0000</a></li>
+                    </ul>
+                    <ul class="info">
+                        <li>
+                            <a href="https://www.facebook.com">F</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com">I</a>
+                        </li>
+                    </ul>
+                </nav>
+            </address>
+        </div>
+        
+        <div id="ham-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <!-- ヘッダー -->
+        
+        <header id="Top" class="top-content">
+            <div class="bg_mask">
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">TOP</a></li>
+                        <li><a href="#About">ABOUT</a></li>
+                        <li><a href="#Works">WORKS</a></li>
+                        <li><a href="#Voice">VOICE</a></li>
+                        <li><a href="#Company">COMPANY</a></li>
+                        <li><a href="#Contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="title">
+                    <h1>Architect</h1>
+                </div>
+                
+                <address class="info">
+                    <nav>
+                        <li>
+                            <a href="https://www.facebook.com">F</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com">I</a>
+                        </li>
+                    </nav>
+                <a href="#">tel 000-0000-0000</a>  
+            </address>
+        </div>
+    </header>
+    
+                    <!-- スライドショー -->
+
+    <div id="pic-slide" class="pic-list">
+            <img class="img1" src="img/LivingRoom.webp" width="800px" height="350px" alt="リビングの画像">
+            <img class="img2" src="img/LivingRoom2.webp" width="800px" height="350px" alt="リビングの画像">
+            <img class="img2" src="img/LivingRoom3.webp" width="800px" height="350px" alt="リビングの画像">
+    </div>
+    
+                    <!-- 新着施工情報 -->
+                    
+                    <article id="About" class="new">
+        <section>
+            <h3>-新着施工情報-</h3>
+            <p>20xx/xx/xx<br>xx周年を迎えるにあたり<br>絶賛キャンペーン中です！</p>
+                <hr>
+                <p>20xx/xx/xx<br><strong>xxの家</strong>　上棟しました！</p>
+                <hr>
+                <p>20xx/xx/xx<br><strong>xxの家</strong>　上棟しました！</p>
+            </section>
+        </article>
+        
+        <!-- 施工事例 -->
+        
+        <article id="Works" class="constraction">
+            <h3>-施工事例-</h3>
+            
+            <div class="example-box">
+                <section class="example">
+                    <figure>
+                        <figcaption><span>No.1</span><br><strong>xxの家</strong></figcaption>
+                        <a href="#"><img src="img/house1.webp" width="350px" height="200px" alt="家の画像"></a>
+                    </figure>
+                </section>
+            <section class="example">
+                <figure>
+                    <figcaption><span>No.2</span><br><strong>xxの家</strong></figcaption>
+                    <a href="#"><img src="img/house2.webp" width="350px" height="200px" alt="家の画像"></a>
+                </figure>
+            </section>
+        </div>
+        
+        <div class="example-box2">
+            <section class="example">
+                <figure>
+                    <figcaption><span>No.3</span><br><strong>xxの家</strong></figcaption>
+                    <a href="#"><img src="img/house3.webp" width="350px" height="200px" alt="家の画像"></a>
+                </figure>
+            </section>
+            <section class="example">
+                <figure>
+                    <figcaption><span>No.4</span><br><strong>xxの家</strong></figcaption>
+                    <a href="#"><img src="img/house4.webp" width="350px" height="200px" alt="家の画像"></a>
+                </figure>
+            </section>
+        </div>
+    </article>
+    
+    <!-- お客様の声 -->
+    
+    <article id="Voice" class="client-voice">
+        <h4>-お客様の声-</h4>
+        <section>
+            <figure>
+                <img src="img/clientHouse.webp" width="400px" height="200px" alt="お客様の家">
+                <figcaption>
+                    <span>#01</span><br>
+                    samplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesample
+                </figcaption>
+            </figure>
+            <figure class="reverse">
+                <figcaption>
+                    <span>#02</span><br>
+                    samplesamplesamplesamplesamplesamplesamplesamplesamplesamplesamplesample
+                </figcaption>
+                <img src="img/clientHouse2.webp" width="400px" height="200px" alt="お客様の家">
+            </figure>
+            
+        </section>
+    </article>
+
+    <!-- スタッフ紹介 -->
+    
+    <article class="Profile">
+        <h4>STAFF</h4>
+        
+        <section>
+            <div class="profile-box">
+                <figure>
+                    <img src="img/human.jpg" width="150px" height="150px" alt="人物画像">
+                    <figcaption>Age:<br>Name<br>Producer</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/human.jpg" width="150px" height="150px" alt="人物画像">
+                    <figcaption>Age:<br>Name<br>Producer</figcaption>
+                </figure>
+            </div>
+            <div class="profile-box2">
+                <figure>
+                    <img src="img/human.jpg" width="150px" height="150px" alt="人物画像">
+                    <figcaption>Age:<br>Name<br>Designer</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/human.jpg" width="150px" height="150px" alt="人物画像">
+                    <figcaption>Age:<br>Name<br>Designer</figcaption>
+                </figure>
+            </div>
+        </section>
+    </article>
+    
+                    <!-- 会社概要 -->
+
+                    <div id="Company" class="Map">
+        <h4>-会社概要-</h4>
+        <p>〒 000-0000<br>住所</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828029576439!2d139.7671248!3d35.68123620000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1618213577800!5m2!1sja!2sjp" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+    <footer>
+        <div id="Contact">
+            <h4>-お問い合わせ-</h4>
+            <address class="phone">
+                <ul>
+                    <li><a href="#">xxxx@xxxx.com</a></li>
+                    <li><a href="#">tel 000-0000-0000</a></li>
+                </ul>
+            </address>
+            
+            <div class="menuBox">
+                <nav>
+                    <ul>
+                        <li><a href="#About">ABOUT</a></li>
+                        <li><a href="#Top">TOP</a></li>
+                        <li><a href="#Works">WORKS</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menuBox2">
+                <nav>
+                    <ul>
+                        <li><a href="#Contact">CONTACT</a></li>
+                        <li><a href="#Voice">VOICE</a></li>
+                        <li><a href="#Company">COMPANY</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <p><small>&copy;2021 Architect, Inc.</small></p>
+    </footer>
+    
+</body>
+</html>
